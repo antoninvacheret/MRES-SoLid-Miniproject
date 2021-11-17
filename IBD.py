@@ -31,7 +31,12 @@ def run():
 #-------------------------------------------------------------------------------
 
 def apply_rt_cuts(data):
-	print('TODO')
+    # Python masks are extremely useful tools
+    # Here we use one to apply an example cut on the prompt energy keeping events above 2 MeV energy
+
+    mask = data[:,5] > 2.0
+    cut_data = data[mask]
+    return cut_data
 
 
 #-------------------------------------------------------------------------------
